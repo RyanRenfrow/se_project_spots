@@ -8,6 +8,7 @@
   width: 413px;
   object-fit: cover;
   display: block;
+  border-radius: 25px;
 }
 
 .card__like-button {
