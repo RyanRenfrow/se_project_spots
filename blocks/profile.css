@@ -20,6 +20,9 @@
 
 .profile__name {
   margin: 0 0 12px;
+  font-weight: 500px;
+  font-size: 32px;
+  line-height: 1;
 }
 
 .profile__description {
@@ -53,4 +56,38 @@
 .profile__pencil-icon {
   margin-right: 8px;
   max-width: 18px;
+}
+
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    max-width: 288px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .profile__avatar {
+    margin: 0;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 12px;
+  }
+
+  .profile__name {
+    font-size: 20px;
+    margin: 6px;
+  }
+
+  .profile__column {
+    margin: 0 0 20px;
+  }
+
+  .profile__description {
+    margin: 0 0 20px;
+  }
+  .profile__add-btn {
+    margin: 0;
+    width: 100%;
+  }
 }
