@@ -23,10 +23,22 @@
   font-weight: 500px;
   font-size: 32px;
   line-height: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
 }
 
 .profile__description {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
 }
 
 .profile__add-btn {
@@ -76,15 +88,18 @@
 
   .profile__name {
     font-size: 20px;
-    margin: 6px;
+    margin-bottom: 6px;
+    max-width: 288px;
   }
 
   .profile__column {
-    margin: 0 0 20px;
+    margin-right: 0 0 20px;
   }
 
   .profile__description {
     margin: 0 0 20px;
+    font-size: 16px;
+    max-width: 288px;
   }
   .profile__add-btn {
     margin: 0;
