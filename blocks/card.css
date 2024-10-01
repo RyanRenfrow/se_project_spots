@@ -3,12 +3,24 @@
   padding-top: 20px;
 }
 
+.card__title {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 410px;
+}
+
 .card__image {
   height: 413px;
   width: 413px;
   object-fit: cover;
   display: block;
-  border-radius: 25px;
+  border-radius: 8px;
 }
 
 .card__like-button {
@@ -25,7 +37,7 @@
   justify-content: space-between;
 }
 
-@media and (max-width: 627px) {
+@media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
   }
