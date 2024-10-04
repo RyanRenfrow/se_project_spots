@@ -23,6 +23,7 @@
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
+  color: rgba(33, 33, 33, 1);
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -33,6 +34,7 @@
 
 .profile__description {
   margin: 0;
+  color: rgba(33, 33, 33, 0.7);
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -43,7 +45,7 @@
 
 .profile__add-btn {
   margin-left: auto;
-  width: 142px;
+  width: 149px;
   height: 52px;
   color: #fff;
   background-color: #212121;
@@ -70,6 +72,9 @@
   max-width: 18px;
 }
 
+/*NEEDS CORRECTING:
+A hover effect doesn't match the design. Please check figma and remove selector by tag, each button needs a hover specified separately, because they need different effects.
+*/
 button:hover {
   background-color: grey;
   color: white;

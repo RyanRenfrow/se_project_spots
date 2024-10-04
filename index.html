@@ -13,6 +13,9 @@
   <body>
     <div class="page">
       <header class="header">
+        <!--WELL-DONE:
+        Logo in svg format
+        -->
         <img src="images/logo.svg" alt="Spots logo" class="header__logo" />
       </header>
       <main class="content">
@@ -25,7 +28,24 @@
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
-            <button class="profile__edit-btn">
+            <button class="profile__edit-btn" type="button">
+              <!--COULD BE IMPROVED:
+              It's better to use a background image for the button to implement the icon, instead of adding this as an image in html.
+              But since the button contains both icon and the text, this can be a little tricky. You'll need a `::before` pseudo-selector with a background image instead of <img> tag.
+
+
+              ```
+              .profile__edit-button::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background-image: url(../images/button-pencil.svg);
+              }
+              ```
+
+              You can also do the same for the "add" button.
+              https://developer.mozilla.org/en-US/docs/Web/CSS/::before
+              -->
               <img
                 class="profile__pencil-icon"
                 src="./images/pencil.svg"
@@ -33,7 +53,7 @@
               />Edit profile
             </button>
           </div>
-          <button class="profile__add-btn">
+          <button class="profile__add-btn" type="button">
             <img
               class="profile__plus-icon"
               src="./images/plus.svg"
@@ -44,6 +64,7 @@
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
+            <!--WELL-DONE: A place card is made a separate BEM block -->
             <li class="card">
               <img
                 src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
@@ -115,7 +136,70 @@
           </ul>
         </section>
       </main>
-      <footer class="footer">2024 &copy; Spots</footer>
+      <!--NEEDS CORRECTING:
+      Text should be inside a paragraph. Please use `<p>` inside of `<footer>` (not instead it)
+      Keep in mind that it will be necessary to reset default margins for this paragraphs in CSS, so the paragraph will need a class name
+      -->
+      <footer><p class="footer">2024 &copy; Spots</p></footer>
     </div>
   </body>
 </html>
+
+<!--
+
+Bravo, Ryan!
+
+Sprint 3 can be tough, but you've shown great perseverance. Take a look at my comments and keep pushing forward with your revisions.
+
+**Parts I really liked in your project:**
+
+- Grid and Flexbox are used
+- Good semantics
+- The page has a great resemblance to the design
+- Well-structured markup.
+- Good BEM naming and file structure
+- Long text in profile and cards is truncated
+
+There are a few things that need to be corrected in your project. They're mostly minor issues that are easy to fix.
+
+**Needs correcting:**
+
+- All comments in the code marked "Needs correcting" **and comments below:**
+- It's necessary to fix all the errors found by html validator: https://validator.w3.org/nu/#textarea. Warnings are not necessary to fix, but highly recommended.
+- Please record a video about your project and add the link to the `README.md` file (you can find detailed information and video requirements in the task for this project).
+- Please, add a README.md file to the project. The README.md file should contain:
+	- the project's name;
+	- a description of the project and its functionality;
+	- a description of technologies and techniques used.
+	- Pictures, GIFs, or screenshots that detail the project features (highly recommended).
+	- the link to GitHub Pages with a published project: https://tripleten.com/trainer/web/lesson/07e0bdf0-d597-4a8f-8dda-eada84722122/?from=program
+- **Everywhere** where you assign font-family, it's necessary to also provide a fallback and generic font name, like that: font-family: 'Poppins', Arial, sans-serif;
+https://developer.mozilla.org/en/docs/Web/CSS/font-family You can find all similar cases using search in your IDE (e.g. in VS Code: https://prnt.sc/JsKBci-_hAGU)
+- Please add cursor pointer and hover effect to all buttons on the page. You'll find the correct values in figma.
+- On desktop:
+	- Gap between card rows is bigger than in figma.
+	- Gap between the last row of cards and the bottom border of `cards` is bigger than in figma
+- On 320:
+	- horizontal scroll https://prnt.sc/gCVHo-gAHcyx Please check styles in your media queries, paying the closest attention to cards (width of cards and their elements)
+	- text content in the profile isn't centered
+	- Gaps between cards are too big
+	- Gap between the last card and the bottom border of `cards` is bigger than in figma.
+- Horizontal scroll on resolutions between 320 - 537 There should be no content that exceeds the body width. Please, revise your media queries for these resolutions.
+Note that content shouldn't exceed content area of the parent container. There is no mockup for intermediate resolutions,
+but the layout should stay consistent and the page shouldn't have any horizontal scroll on any resolution 320 and higher.
+It's also necessary to make sure that the page doesn't scroll on media screens with long text entered in profile.
+
+There are also some comments for improvement. They don’t mean that you’ve done anything wrong, but they’re things we wanted to point out that can help you further develop your skills.
+
+**Could be improved:**
+
+- All comments in the code marked "Could be improved" **and comments below:**
+- You can use PerfectPixel plugin to compare your project with the design: https://www.welldonecode.com/perfectpixel/
+- It would be great if the footer stayed on the bottom of the page, even if there was less content than in the design. Please, consider implementing a "sticky footer": https://css-tricks.com/couple-takes-sticky-footer/
+- Add transition to all buttons so that the hover effect runs smoothly.
+
+**A reminder:** It’s necessary to fix all **"Needs correcting"** comments to get the project accepted. And **"Could be improved"** comments are optional, they will be up to you if you want to implement them.
+
+Good luck!✨
+
+-->
