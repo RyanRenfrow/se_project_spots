@@ -1,14 +1,7 @@
 .cards {
-  /*NEEDS CORRECTING:
-  The property isn't applied, because it's reassigned below. Please remove
-  */
-  padding-top: 20px;
   border-bottom: 1px solid #21212166;
-  /*NEEDS CORRECTING:
-  Please note that this value should be different **on mobile screens**, the gap at the bottom of the section should be changed in a media query.
-  */
-  padding: 0px 0px 40px 0px;
-  gap: 20px;
+  padding: 20px 0px 40px 0px;
+  gap: 40px;
 }
 
 .cards__list {
@@ -24,5 +17,8 @@
 @media screen and (max-width: 627px) {
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
+  }
+  .cards {
+    gap: 20px;
   }
 }

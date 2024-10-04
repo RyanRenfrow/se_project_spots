@@ -11,16 +11,13 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  /*NEEDS CORRECTING:
-  It's necessary to limit the maximum width of the title so that the icon doesn't get cropped when the text is long: https://prnt.sc/DrzK3vp7jFZO
-  */
   max-width: 350px;
   margin: 12px 0 0;
 }
 
 .card__image {
   height: 413px;
-  width: 413px;
+  width: 100%;
   object-fit: cover;
   display: block;
   border-radius: 8px;
@@ -32,6 +29,10 @@
   height: 20px;
   opacity: 40%;
   border: none;
+}
+
+.card__like-button:hover {
+  opacity: 1;
 }
 
 .card__content {

@@ -72,12 +72,12 @@
   max-width: 18px;
 }
 
-/*NEEDS CORRECTING:
-A hover effect doesn't match the design. Please check figma and remove selector by tag, each button needs a hover specified separately, because they need different effects.
-*/
-button:hover {
-  background-color: grey;
-  color: white;
+.profile__edit-btn:hover {
+  opacity: 1;
+}
+
+.profile__add-btn:hover {
+  background-color: rgba(33, 33, 33, 0.8);
 }
 
 @media screen and (max-width: 627px) {
