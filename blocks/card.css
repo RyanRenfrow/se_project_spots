@@ -12,7 +12,8 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 350px;
-  margin: 12px 0 0;
+  margin: 0;
+  color: rgba(33, 33, 33, 1);
 }
 
 .card__image {
@@ -27,6 +28,7 @@
   background-image: url(../images/heart.svg);
   width: 23px;
   height: 20px;
+  background-color: transparent;
   opacity: 40%;
   border: none;
 }
@@ -39,9 +41,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 12px;
 }
 
 @media screen and (max-width: 627px) {
+  .card__title {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   .card__image {
     height: 288px;
   }
