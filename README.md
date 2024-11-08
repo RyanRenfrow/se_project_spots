@@ -18,7 +18,7 @@ Some Key techniques/technologies -
 I used the method of @import to add in blocks making the website much more clear and organized. 
 Implented the Poppins font via font.css to apply it across the board. Still having to adjust the font weight in each block according to figma. 
 As mentioned before I used @media to adjust the elements as the screen size changed. To a max-width of 627 pixels. 
-I used flex to align the elements accordingly as that's what worked best for me as oppose to grid. Example of flex being used to have the new post button horizontal to the profile picture, to match figma. 
+For the cards I used grid template over flex to have the layout form a proper column for what I needed. Flex helped me more so in spacing and aligning elements such as the new post button and profile picture. 
 I also used rgb color method instead of hex and names as the rgb method mirrored figmas. Also to make it more uniform/consistent in VSCODE.
 
 
