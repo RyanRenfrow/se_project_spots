@@ -1,6 +1,6 @@
 # Project 3: Spots
 
-### Overview  
+Intro. 
 
 - Hey my name is Ryan Renfrow this project is titled Spots.
   This project is showing how to adapt an website based on it's screen size. Being able to decrease the size and change the layout to fit a phone whilst also being able to function properly on a desktop.
