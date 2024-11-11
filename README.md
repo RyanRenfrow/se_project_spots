@@ -1,6 +1,5 @@
 # Project 3: Spots
 
-<<<<<<< HEAD
 Intro.
 =======
 Intro. 
@@ -29,5 +28,4 @@ I also used rgb color method instead of hex and names as the rgb method mirrored
 Figma Link below.  
   
 * [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
->>>>>>> 18c021233d85c9d206ed51999e618d97f0b02a49
+
