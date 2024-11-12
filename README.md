@@ -24,10 +24,11 @@ I also used rgb color method instead of hex and names as the rgb method mirrored
 I used the BEM Methodology in the project as well with the blocks, elements, and modifiers.
 
 My Video Presentation-
+
 https://drive.google.com/file/d/1jeOOpANUhNg1oMrUoGUaWqLNhyyntFup/view?usp=sharing
 
 Link to my deployed project -
+
 [Project-3](https://ryanrenfrow.github.io/se_project_spots/)
-Figma Link below.
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
