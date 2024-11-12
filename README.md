@@ -1,6 +1,6 @@
 # Project 3: Spots
 
-Intro.
+## Intro.
 
 - Hey my name is Ryan Renfrow this project is titled Spots.
   This project is showing how to adapt an website based on it's screen size. Being able to decrease the size and change the layout to fit a phone whilst also being able to function properly on a desktop.
@@ -26,6 +26,8 @@ I used the BEM Methodology in the project as well with the blocks, elements, and
 My Video Presentation-
 https://drive.google.com/file/d/1jeOOpANUhNg1oMrUoGUaWqLNhyyntFup/view?usp=sharing
 
+Link to my deployed project -
+[Project-3](https://ryanrenfrow.github.io/se_project_spots/)
 Figma Link below.
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
