@@ -58,6 +58,7 @@
   border: none;
   border-radius: 8px;
   align-self: end;
+  cursor: pointer;
 }
 
 .profile__plus-icon {
@@ -75,6 +76,7 @@
   opacity: 0.7;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .profile__pencil-icon {
