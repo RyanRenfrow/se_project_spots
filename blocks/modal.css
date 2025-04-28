@@ -97,3 +97,14 @@
   padding-left: 32px;
   gap: 8px;
 }
+
+@media screen and (max-width: 627px) {
+  .modal__input {
+    width: 100%;
+    max-width: none;
+  }
+  .modal__submit-btn {
+    width: 100%;
+    max-width: none;
+  }
+}
