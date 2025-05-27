@@ -122,7 +122,7 @@
       <footer><p class="footer">2024 &copy; Spots</p></footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button class="modal__close-btn"></button>
+          <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
           <form class="modal__form">
             <label for="profile-name-input" class="modal__label"
@@ -147,7 +147,7 @@
         <div class="modal__container">
           <button class="modal__close-btn"></button>
           <h2 class="modal__title">New Post</h2>
-          <form class="modal__form">
+          <form class="modal__form" id="add-card-form">
             <label for="card-image-input" class="modal__label"
               >Image Link<input
                 id="card-image-input"
@@ -155,9 +155,9 @@
                 class="modal__input"
                 placeholder="Paste a link to the picture"
             /></label>
-            <label for="profile-caption-input" class="modal__label"
+            <label for="card-caption-input" class="modal__label"
               >Caption<input
-                id="profile-caption-input"
+                id="card-caption-input"
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
