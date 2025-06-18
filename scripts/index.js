@@ -51,7 +51,7 @@ const nameInput = document.querySelector("#card-image-input");
 const linkInput = document.querySelector("#card-caption-input");
 
 const previewModal = document.querySelector("#preview-modal");
-const previewModalClosedBtn = previewModal.querySelector(".modal__close");
+const previewModalClosedBtn = previewModal.querySelector(".modal__close-btn");
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewTitleEl = previewModal.querySelector(".modal__caption");
 
@@ -81,17 +81,24 @@ function getCardElement(data) {
   });
 
   cardImageEl.addEventListener("click", () => {
+    console.log("card");
     previewImageEl.src = data.link;
     previewImageEl.alt = data.name;
     previewTitleEl.textContent = data.name;
 
     openModal(previewModal);
+  });
 
-    /*   previewModalClosedBtn.addEventListener("click", function () {
-  closeModal(previewModal); */
+  previewModalClosedBtn.addEventListener("click", () => {
+    console.log("clicked");
+    previewModal.classList.remove("modal_is-opened");
   });
 
   return cardElement;
+}
+
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
 }
 
 function closeModal(modal) {
@@ -99,7 +106,7 @@ function closeModal(modal) {
 }
 
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
 });
 
 newPostCloseBtn.addEventListener("click", function () {
@@ -109,16 +116,10 @@ newPostCloseBtn.addEventListener("click", function () {
 function handleAddNewPostSubmit(evt) {
   evt.preventDefault();
 
-  // log both inputs to the console
   console.log("Name Input", nameInput.value);
   console.log("Link Input", linkInput.value);
 
-  // close the modal
   closeModal(newPostModal);
-
-  // when you successfully save a card you can then clear the inputs of the new post form
-  // nameInput.value = "";
-  // linkInput.value = "";
 }
 
 addCardFormElement.addEventListener("submit", handleAddNewPostSubmit);
@@ -130,7 +131,7 @@ editProfileBtn.addEventListener("click", function () {
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
-  closeModal(newPostModal);
+  closeModal(editProfileModal);
 });
 
 function handleEditProfileSubmit(evt) {
@@ -146,8 +147,8 @@ addCardFormElement.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
   const inputValue = {
-    name: captionInputEl.value,
-    link: linkInputEl.value,
+    name: nameInput.value,
+    link: linkInput.value,
   };
 
   const cardElement = getCardElement(inputValue);

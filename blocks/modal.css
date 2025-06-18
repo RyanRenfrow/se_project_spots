@@ -97,7 +97,6 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
-  letter-spacing: 0%;
   background: rgba(33, 33, 33, 1);
   color: rgba(255, 255, 255, 1);
   width: 214px;
@@ -105,10 +104,8 @@
   top: 750px;
   left: 223px;
   padding-top: 4px;
-  padding-right: 8px;
-  padding-bottom: 4px;
-  padding-left: 8px;
   border-radius: 8px;
+  text-align: center;
 }
 
 .modal__input {
@@ -192,5 +189,7 @@
 
   .modal__image {
     max-width: unset;
+    width: 446px;
+    border-radius: 8px;
   }
 }
