@@ -112,15 +112,6 @@ newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
-function handleAddNewPostSubmit(evt) {
-  console.log("Name Input", nameInput.value);
-  console.log("Link Input", linkInput.value);
-
-  closeModal(newPostModal);
-}
-
-addCardFormElement.addEventListener("submit", handleAddNewPostSubmit);
-
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEL.textContent;
