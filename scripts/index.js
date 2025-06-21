@@ -113,8 +113,6 @@ newPostCloseBtn.addEventListener("click", function () {
 });
 
 function handleAddNewPostSubmit(evt) {
-  evt.preventDefault();
-
   console.log("Name Input", nameInput.value);
   console.log("Link Input", linkInput.value);
 
@@ -125,7 +123,7 @@ addCardFormElement.addEventListener("submit", handleAddNewPostSubmit);
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
-  editProfilDescriptionInput.value = profileDescriptionEL.textContent;
+  editProfileDescriptionInput.value = profileDescriptionEL.textContent;
   editProfileModal.classList.add("modal_is-opened");
 });
 
@@ -136,7 +134,7 @@ editProfileCloseBtn.addEventListener("click", function () {
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
-  profileDescriptionEL.textContent = editProfilDescriptionInput.value;
+  profileDescriptionEL.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
 }
 
@@ -150,7 +148,11 @@ addCardFormElement.addEventListener("submit", function (evt) {
     link: linkInput.value,
   };
 
+  nameInput.value = "";
+  linkInput.value = "";
+
   const cardElement = getCardElement(inputValue);
+
   cardsList.prepend(cardElement);
 
   closeModal(newPostModal);
