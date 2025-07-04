@@ -42,6 +42,7 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__button");
 
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEL = document.querySelector(".profile__description");
@@ -115,6 +116,11 @@ newPostCloseBtn.addEventListener("click", function () {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEL.textContent;
+  resetValidation(
+    editProfileForm,
+    [editProfileNameInput, editProfileDescriptionInput],
+    settings
+  );
   editProfileModal.classList.add("modal_is-opened");
 });
 
@@ -127,13 +133,13 @@ function handleEditProfileSubmit(evt) {
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEL.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
+  disableButton(cardSubmitbtn, settings);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 addCardFormElement.addEventListener("submit", function (evt) {
   evt.preventDefault();
-
   const inputValue = {
     name: nameInput.value,
     link: linkInput.value,
