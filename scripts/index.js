@@ -106,17 +106,16 @@ function handleEscapeKey(event) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  modal.addEventListener("keydown", handleEscapeKey);
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
-  modal.removeEventListener("keydown", handleEscapeKey);
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
-  // newPostBtn.reset();
 });
 
 newPostCloseBtn.addEventListener("click", function () {
@@ -132,10 +131,12 @@ editProfileBtn.addEventListener("click", function () {
     settings
   );
   editProfileModal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeKey);
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
   closeModal(editProfileModal);
+  document.removeEventListener("keydown", handleEscapeKey);
 });
 
 function handleEditProfileSubmit(evt) {
