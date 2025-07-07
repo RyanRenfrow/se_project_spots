@@ -42,10 +42,10 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
-const newPostSubmitBtn = newPostModal.querySelector(".modal__button");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 
 const profileNameEl = document.querySelector(".profile__name");
-const profileDescriptionEL = document.querySelector(".profile__description");
+const profileDescriptionEl = document.querySelector(".profile__description");
 
 const addCardFormElement = document.querySelector("#add-card-form");
 const nameInput = document.querySelector("#card-image-input");
@@ -97,16 +97,26 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function handleEscapeKey(event) {
+  if (event.key === "Escape") {
+    const activeModal = document.querySelector(".modal_is-opened");
+    closeModal(activeModal);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  modal.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  modal.removeEventListener("keydown", handleEscapeKey);
 }
 
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
+  // newPostBtn.reset();
 });
 
 newPostCloseBtn.addEventListener("click", function () {
@@ -115,7 +125,7 @@ newPostCloseBtn.addEventListener("click", function () {
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
-  editProfileDescriptionInput.value = profileDescriptionEL.textContent;
+  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
   resetValidation(
     editProfileForm,
     [editProfileNameInput, editProfileDescriptionInput],
@@ -131,9 +141,9 @@ editProfileCloseBtn.addEventListener("click", function () {
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
-  profileDescriptionEL.textContent = editProfileDescriptionInput.value;
+  profileDescriptionEl.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
-  disableButton(cardSubmitbtn, settings);
+  disableButton(newPostSubmitBtn, settings);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);

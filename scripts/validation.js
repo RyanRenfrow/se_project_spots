@@ -34,17 +34,17 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonEl) => {
+const toggleButtonState = (inputList, buttonEl, config) => {
   console.log(hasInvalidInput(inputList));
   if (hasInvalidInput(inputList)) {
     disableButton(buttonEl);
   } else {
-    buttonEl.disabled = false;
+    buttonEl.inactiveButtonClass = false;
   }
 };
 
 const disableButton = (buttonEl, config) => {
-  buttonEl.disabled = true;
+  buttonEl.inactiveButtonClass = true;
 };
 
 const resetValidation = (formEl, inputList) => {
@@ -74,6 +74,4 @@ const enableValidation = (config) => {
   });
 };
 
-enableValidation(config);
-
-//A bit confused on the config portion, once I change to settings the configs aren't valid.
+enableValidation(settings);
