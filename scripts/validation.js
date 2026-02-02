@@ -80,3 +80,5 @@ const enableValidation = (config) => {
 };
 
 enableValidation(settings);
+
+/*Thank you Marina, I also used Dot to help explain the issues too. I'll delete this comment afterwards but just wanted to give my appreciation for the explanations you gave. */
