@@ -34,10 +34,10 @@ const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 const editProfileNameInput = editProfileModal.querySelector(
-  "#profile-name-input"
+  "#profile-name-input",
 );
 const editProfileDescriptionInput = editProfileModal.querySelector(
-  "#profile-description-input"
+  "#profile-description-input",
 );
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
@@ -48,9 +48,10 @@ const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
 const addCardFormElement = document.querySelector("#add-card-form");
-const nameInput = document.querySelector("#card-image-input");
-const linkInput = document.querySelector("#card-caption-input");
+const nameInput = document.querySelector("#card-caption-input");
+const linkInput = document.querySelector("#card-image-input");
 
+const modals = document.querySelectorAll(".modal");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalClosedBtn = previewModal.querySelector(".modal__close-btn");
 const previewImageEl = previewModal.querySelector(".modal__image");
@@ -65,7 +66,6 @@ function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
-
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
@@ -96,6 +96,14 @@ function getCardElement(data) {
 
   return cardElement;
 }
+
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (event) => {
+    if (event.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
+});
 
 function handleEscapeKey(event) {
   if (event.key === "Escape") {
@@ -128,7 +136,7 @@ editProfileBtn.addEventListener("click", function () {
   resetValidation(
     editProfileForm,
     [editProfileNameInput, editProfileDescriptionInput],
-    settings
+    settings,
   );
   editProfileModal.classList.add("modal_is-opened");
   document.addEventListener("keydown", handleEscapeKey);

@@ -7,17 +7,17 @@ const settings = {
   errorClass: "modal__error",
 };
 
-const showInputError = (formEl, inputEl, errorMsg, config) => {
+const showInputError = (formEl, inputEl, errorMsg) => {
   const errorMsgID = inputEl.id + "-error";
   const errorMsgEl = formEl.querySelector("#" + errorMsgID);
   errorMsgEl.textContent = errorMsg;
-  inputEl.classList.add(config.inputErrorClass);
+  inputEl.classList.add();
 };
 
-const hideInputError = (formEl, inputEl, config) => {
+const hideInputError = (formEl, inputEl) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = "";
-  inputEl.classList.remove(config.inputErrorClass);
+  inputEl.classList.remove();
 };
 
 const checkInputValidity = (formEl, inputEl) => {
@@ -34,8 +34,8 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonEl, config) => {
-  console.log(hasInvalidInput(inputList, config));
+const toggleButtonState = (inputList, buttonEl) => {
+  console.log(hasInvalidInput(inputList));
   if (hasInvalidInput(inputList)) {
     disableButton(buttonEl);
   } else {
